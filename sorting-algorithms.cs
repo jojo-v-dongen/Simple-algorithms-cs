@@ -2,10 +2,11 @@ using System;
 using System.Globalization;
 using System.Linq;
 using System.Reflection.Metadata;
+using System.Runtime.CompilerServices;
 
-class Program
+class SortingAlgorithms
 {
-    static void Main()
+    public static void AlsonotMain()
     {
 
         // Create a random number generator
@@ -13,11 +14,22 @@ class Program
 
         System.Console.WriteLine("How many items should the list contain? -->");
         var amount = int.Parse(Console.ReadLine());
-        int[] array_of_numbers = new int[amount];       // Make an array to put `amount` elements in array
-        for (int i = 0; i < amount; i++) {              
-            array_of_numbers[i] = i + 1;      
+        System.Console.WriteLine("If you want each item to be randomly generated between 1-100, enter '1'.");
+        int randomornot = int.Parse(Console.ReadLine());
+        int[] array_of_numbers = new int[amount];
+
+        if(randomornot == 1){
+            for (int i = 0; i < amount; i++) {              
+                array_of_numbers[i] = rng.Next(1, 101);   
+            }
         }
-        
+
+        else{
+            for (int i = 0; i < amount; i++) {              
+                array_of_numbers[i] = i + 1;      
+            }
+        }
+
         // Shuffle the array using OrderBy
         var original_shuffled_array_of_numbers = array_of_numbers.OrderBy(x => rng.Next()).ToArray();
         int[] sorted_array_of_numbers;
@@ -39,9 +51,13 @@ class Program
         sorted_array_of_numbers = SelectionSort(original_shuffled_array_of_numbers);
         Console.WriteLine(string.Join(", ", sorted_array_of_numbers));
 
+        System.Console.WriteLine("Sorting Now: Pigeonhole Sort");
+        sorted_array_of_numbers = PigeonholeSort(original_shuffled_array_of_numbers);
+        Console.WriteLine(string.Join(", ", sorted_array_of_numbers));
+
     }
 
-    static int[] InsertionSort(int[] shuffled_array)
+    public static int[] InsertionSort(int[] shuffled_array)
     {
         int item_to_insert;
         int j;
@@ -90,5 +106,49 @@ class Program
         }
         return shuffled_array;
     }
+    static bool IsSorted(int[] array)
+    {
+        for (int i = 1; i < array.Length; i++)
+        {
+            if (array[i] < array[i - 1])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    static int[] BogoSort(int[] array)   //Incredibly efficient, I know.
+    {
+        Random rng = new Random();
+        while (!IsSorted(array))
+        {
+            array = array.OrderBy(x => rng.Next()).ToArray();
+        }
+        return array;
+    }
+
+    static int[] PigeonholeSort(int[] array){
+        int high = array.Max();
+        int low = array.Min();
+        int[] pigeonholes = new int[high - low + 1];
+
+        foreach (int num in array)
+        {
+            pigeonholes[num - low]++;
+        }
+
+        int index = 0;
+        for (int i = 0; i < pigeonholes.Length; i++)
+        {
+            while (pigeonholes[i] > 0)
+            {
+                array[index] = i + low;
+                pigeonholes[i]--;
+                index++;
+            }
+        }
+        return array;
+    }
+
 
 }
