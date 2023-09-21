@@ -1,0 +1,14 @@
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\obj\Debug\net7.0\project_idk.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\obj\Debug\net7.0\project_idk.AssemblyInfoInputs.cache
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\obj\Debug\net7.0\project_idk.AssemblyInfo.cs
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\obj\Debug\net7.0\project_idk.csproj.CoreCompileInputs.cache
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\bin\Debug\net7.0\project_idk.exe
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\bin\Debug\net7.0\project_idk.deps.json
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\bin\Debug\net7.0\project_idk.runtimeconfig.json
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\bin\Debug\net7.0\project_idk.dll
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\bin\Debug\net7.0\project_idk.pdb
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\obj\Debug\net7.0\project_idk.dll
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\obj\Debug\net7.0\refint\project_idk.dll
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\obj\Debug\net7.0\project_idk.pdb
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\obj\Debug\net7.0\project_idk.genruntimeconfig.cache
+C:\Users\jordy\Dropbox\My PC (DESKTOP-PA7J264)\Documents\project_idk\obj\Debug\net7.0\ref\project_idk.dll
